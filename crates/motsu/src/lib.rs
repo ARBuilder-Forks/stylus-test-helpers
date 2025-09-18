@@ -1652,7 +1652,7 @@ mod vm_tests {
         }
 
         fn get_block_timestamp(&self) -> u64 {
-            block::timestamp()
+            self.vm().block_timestamp()
         }
     }
 

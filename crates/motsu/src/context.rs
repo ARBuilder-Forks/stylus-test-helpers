@@ -948,7 +948,7 @@ pub(crate) fn create_default_storage_type<ST: StorageType>() -> ST {
         ST::new(
             U256::ZERO,
             0,
-            stylus_sdk::host::VM(stylus_sdk::host::WasmVM {}),
+            stylus_sdk::host::VM { host: stylus_sdk::host::WasmVM {} },
         )
     }
 }

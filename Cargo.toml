@@ -63,3 +63,11 @@ default = { extend-ignore-identifiers-re = [
   # ignore hex data samples.
   "[0-9a-fA-F][0-9a-fA-F]",
 ] }
+
+[patch.crates-io.stylus-sdk]
+git = "https://github.com/qalisander/stylus-sdk-rs"
+branch = "wasm-binary-optimisation"
+
+[patch.crates-io.stylus-proc]
+git = "https://github.com/qalisander/stylus-sdk-rs"
+branch = "wasm-binary-optimisation"

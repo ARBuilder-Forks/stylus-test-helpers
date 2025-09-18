@@ -2914,20 +2914,20 @@ checksum = "7da8b5736845d9f2fcb837ea5d9e2628564b3b043a70948a3f0b778838c5fb4f"
 [[package]]
 name = "stylus-core"
 version = "0.10.0-beta.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3ecfdc2ff65f8a5fc13e4525a0eab323b0f37fbb259a44809a270190ba405d52"
+source = "git+https://github.com/qalisander/stylus-sdk-rs?branch=wasm-binary-optimisation#bf940bac1189b6a351189ac5bb89d7a23dbb4952"
 dependencies = [
  "alloy-primitives",
  "alloy-sol-types",
  "cfg-if",
  "dyn-clone",
+ "lazy_static",
+ "regex",
 ]
 
 [[package]]
 name = "stylus-proc"
 version = "0.10.0-beta.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "16181d192805d501c94071f7e2d569f574921e39ba25291d2805896979bd514c"
+source = "git+https://github.com/qalisander/stylus-sdk-rs?branch=wasm-binary-optimisation#bf940bac1189b6a351189ac5bb89d7a23dbb4952"
 dependencies = [
  "alloy-primitives",
  "alloy-sol-types",
@@ -2939,6 +2939,7 @@ dependencies = [
  "quote",
  "regex",
  "sha3",
+ "stylus-core",
  "syn 2.0.100",
  "syn-solidity",
  "trybuild",
@@ -2947,8 +2948,7 @@ dependencies = [
 [[package]]
 name = "stylus-sdk"
 version = "0.10.0-beta.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5038d72062400c4b92ccc9b7c1f57f0eb36b7e0132a10efa22795b1d3472ed9a"
+source = "git+https://github.com/qalisander/stylus-sdk-rs?branch=wasm-binary-optimisation#bf940bac1189b6a351189ac5bb89d7a23dbb4952"
 dependencies = [
  "alloy-primitives",
  "alloy-sol-types",
@@ -2957,7 +2957,6 @@ dependencies = [
  "derivative",
  "hex",
  "keccak-const",
- "lazy_static",
  "stylus-core",
  "stylus-proc",
 ]
