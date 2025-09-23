@@ -1911,6 +1911,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "78ca9ab1a0babb1e7d5695e3530886289c18cf2f87ec19a575a0abdce112e3a3"
 
 [[package]]
+name = "mini-alloc"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b620761d4c29ede39bb1351c4360dba54d3b414d9fb460d37cba4c98b37a0b9d"
+dependencies = [
+ "cfg-if",
+]
+
+[[package]]
 name = "motsu"
 version = "0.10.0"
 dependencies = [
@@ -2914,7 +2923,7 @@ checksum = "7da8b5736845d9f2fcb837ea5d9e2628564b3b043a70948a3f0b778838c5fb4f"
 [[package]]
 name = "stylus-core"
 version = "0.10.0-beta.1"
-source = "git+https://github.com/qalisander/stylus-sdk-rs?branch=wasm-binary-optimisation#bf940bac1189b6a351189ac5bb89d7a23dbb4952"
+source = "git+https://github.com/OffchainLabs/stylus-sdk-rs?branch=main#dda4e2105a9406425df354e065108229998b5086"
 dependencies = [
  "alloy-primitives",
  "alloy-sol-types",
@@ -2927,7 +2936,7 @@ dependencies = [
 [[package]]
 name = "stylus-proc"
 version = "0.10.0-beta.1"
-source = "git+https://github.com/qalisander/stylus-sdk-rs?branch=wasm-binary-optimisation#bf940bac1189b6a351189ac5bb89d7a23dbb4952"
+source = "git+https://github.com/OffchainLabs/stylus-sdk-rs?branch=main#dda4e2105a9406425df354e065108229998b5086"
 dependencies = [
  "alloy-primitives",
  "alloy-sol-types",
@@ -2948,7 +2957,7 @@ dependencies = [
 [[package]]
 name = "stylus-sdk"
 version = "0.10.0-beta.1"
-source = "git+https://github.com/qalisander/stylus-sdk-rs?branch=wasm-binary-optimisation#bf940bac1189b6a351189ac5bb89d7a23dbb4952"
+source = "git+https://github.com/OffchainLabs/stylus-sdk-rs?branch=main#dda4e2105a9406425df354e065108229998b5086"
 dependencies = [
  "alloy-primitives",
  "alloy-sol-types",
@@ -2957,6 +2966,7 @@ dependencies = [
  "derivative",
  "hex",
  "keccak-const",
+ "mini-alloc",
  "stylus-core",
  "stylus-proc",
 ]
