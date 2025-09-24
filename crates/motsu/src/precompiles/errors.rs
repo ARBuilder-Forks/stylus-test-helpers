@@ -146,9 +146,3 @@ impl core::convert::From<PrecompileError> for Error {
         }
     }
 }
-
-impl MethodError for Error {
-    fn encode(self) -> Vec<u8> {
-        self.into()
-    }
-}
