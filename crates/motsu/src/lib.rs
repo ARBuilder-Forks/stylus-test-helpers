@@ -19,7 +19,6 @@ mod ping_pong_tests {
     use alloy_sol_types::{sol, SolEvent};
     use stylus_sdk::{
         alloy_primitives::{Address, U256},
-        evm,
         prelude::{errors::*, *},
         storage::{StorageAddress, StorageU256},
     };
@@ -73,7 +72,7 @@ mod ping_pong_tests {
             to: Address,
             value: U256,
         ) -> Result<U256, PingError> {
-            evm::log(self.vm(), Pinged { from: self.vm().msg_sender(), value });
+            self.vm().log(Pinged { from: self.vm().msg_sender(), value });
 
             let receiver = IPongContract::new(to);
             let call = Call::new_mutating(self);
@@ -147,7 +146,7 @@ mod ping_pong_tests {
     #[public]
     impl PongContract {
         fn pong(&mut self, value: U256) -> Result<U256, PongError> {
-            evm::log(self.vm(), Ponged { from: self.vm().msg_sender(), value });
+            self.vm().log(Ponged { from: self.vm().msg_sender(), value });
 
             if value == MAGIC_ERROR_VALUE {
                 return Err(PongError::MagicError(MagicError { value }));
