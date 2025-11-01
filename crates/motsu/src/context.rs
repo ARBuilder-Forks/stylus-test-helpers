@@ -555,7 +555,8 @@ impl VM {
     }
 
     /// Get the current chain ID.
-    pub(crate) fn chain_id(self) -> u64 {
+    #[must_use]
+    pub fn chain_id(self) -> u64 {
         self.storage().chain_id
     }
 
@@ -566,7 +567,8 @@ impl VM {
     }
 
     /// Get the current block timestamp.
-    pub(crate) fn block_timestamp(self) -> u64 {
+    #[must_use]
+    pub fn block_timestamp(self) -> u64 {
         self.storage().block_timestamp
     }
 
