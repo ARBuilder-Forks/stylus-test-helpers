@@ -1,9 +1,6 @@
 //! Stylus-compatible error wrappers for [`PrecompileErrors`].
 use revm_precompile::PrecompileError;
-use stylus_sdk::{
-    alloy_sol_types::sol,
-    prelude::{errors::*, *},
-};
+use stylus_sdk::{alloy_sol_types::sol, prelude::*};
 
 sol! {
     /// Out of gas is the main error. Others are here just for completeness.
